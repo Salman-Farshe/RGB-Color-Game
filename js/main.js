@@ -10,7 +10,10 @@ let colors = [
 let square = document.querySelectorAll(".square");
 
 // picked initial color for displaying in the heading
-let pickedColor = colors[3];
+//let pickedColor = colors[3];
+// picked randomly color
+let pickedColor = pickColor();
+
 let displayColor = document.getElementById("displayColor");
 
 displayColor.innerHTML = pickedColor.toUpperCase();
@@ -35,6 +38,9 @@ for(let i = 0; i < square.length; i++){
             for(let i = 0; i < square.length; i++){
                 square[i].style.backgroundColor = clickedColor;
             }
+            // using for()  or use a function
+            // changedSquareColor(clickedColor);
+
             displayMessage.textContent = 'Correct !!!';
             headColor.style.backgroundColor = pickedColor;
         }
@@ -44,4 +50,20 @@ for(let i = 0; i < square.length; i++){
             displayMessage.textContent = 'Try Again !!!';
         }        
     });
+}
+
+/*
+// using for()  or use a function
+
+function changedSquareColor(color){
+    for(let i = 0; i < square.length; i++){
+        square[i].style.backgroundColor = color;
+    }
+}
+*/
+
+// function to picked a color randomly
+function pickColor(){
+    let pickerNumber = Math.floor(Math.random()*colors.length);
+    return colors[pickerNumber];
 }
