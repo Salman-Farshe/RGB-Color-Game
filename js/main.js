@@ -99,3 +99,21 @@ function randomColor(){
     let rgb = `rgb(${r}, ${g}, ${b})`;
     return rgb;
 }
+
+// new Game or Play Again!!
+let playButton = document.querySelector(".play");
+
+playButton.addEventListener("click", function(){
+    // generate all new colors
+    colors = generateRandomColors(6);
+    // picked a new color
+    pickedColor = pickColor();
+    // change the message display color
+    displayColor.textContent = pickedColor.toUpperCase();
+    // changes color of square
+    for(let i = 0; i < square.length; i++){
+        square[i].style.backgroundColor = colors[i];
+    }
+    // changes the h1 background color after matching
+    headColor.style.backgroundColor = "#3a3535";
+});
