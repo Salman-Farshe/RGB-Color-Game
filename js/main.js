@@ -119,3 +119,25 @@ playButton.addEventListener("click", function(){
     headColor.style.backgroundColor = "#3a3535";
     playButton.textContent = "New Game";
 });
+
+// easy mode vs hard mode
+let easyButton = document.querySelector(".easy");
+let hardButtotn = document.querySelector(".hard");
+
+easyButton.addEventListener("click", function(){
+    hardButtotn.classList.remove("selected");
+    easyButton.classList.add("selected");
+
+    colors = generateRandomColors(3);
+    pickedColor = pickColor();
+    displayColor.textContent = pickedColor.toUpperCase();
+    headColor.style.backgroundColor = "#3a3535";
+    for(let i = 0; i < square.length; i++){
+        if(colors[i]){
+            square[i].style.backgroundColor = colors[i];
+        }
+        else{
+            square[i].style.display = "none";
+        }
+    }
+});
