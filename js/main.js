@@ -48,6 +48,7 @@ for(let i = 0; i < square.length; i++){
 
             displayMessage.textContent = 'Correct !!!';
             headColor.style.backgroundColor = pickedColor;
+            playButton.textContent = "Play Again!!!";
         }
         else{
             // color of the body, from css
@@ -116,4 +117,5 @@ playButton.addEventListener("click", function(){
     }
     // changes the h1 background color after matching
     headColor.style.backgroundColor = "#3a3535";
+    playButton.textContent = "New Game";
 });
