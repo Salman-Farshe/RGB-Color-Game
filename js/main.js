@@ -141,3 +141,18 @@ easyButton.addEventListener("click", function(){
         }
     }
 });
+
+
+hardButtotn.addEventListener("click", function(){
+    easyButton.classList.remove("selected");
+    hardButtotn.classList.add("selected");
+
+    colors = generateRandomColors(6);
+    pickedColor = pickColor();
+    displayColor.textContent = pickedColor.toUpperCase();
+    headColor.style.backgroundColor = "#3a3535";
+    for(let i = 0; i < square.length; i++){
+        square[i].style.backgroundColor = colors[i];
+        square[i].style.display = "block";
+    }
+});
