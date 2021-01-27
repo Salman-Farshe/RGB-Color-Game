@@ -1,3 +1,4 @@
+/*
 let colors = [
     'rgb(225, 0, 0)',
     'rgb(155, 255, 0)',
@@ -6,11 +7,15 @@ let colors = [
     'rgb(250, 59, 200)',
     'rgb(0, 150, 150)'
 ];
+*/
+// to get a color randomly
+let colors = generateRandomColors(6);
 
 let square = document.querySelectorAll(".square");
 
 // picked initial color for displaying in the heading
 //let pickedColor = colors[3];
+
 // picked randomly color
 let pickedColor = pickColor();
 
@@ -66,4 +71,31 @@ function changedSquareColor(color){
 function pickColor(){
     let pickerNumber = Math.floor(Math.random()*colors.length);
     return colors[pickerNumber];
+}
+
+
+// function to get a colors randomly 
+function generateRandomColors(num){
+    // make an array
+    let arr = [];
+    // add num random colors to array
+    for(let i = 0; i < num; i++){
+        // get random colors and push into an array
+        arr.push(randomColor());
+    }
+    // return the array
+    return arr;
+}
+
+// function to create random colors
+function randomColor(){
+    // get red from 0 to 255
+    let r = Math.floor(Math.random()*256);
+    // get green from 0 to 255
+    let g = Math.floor(Math.random()*256);
+    // get blue from 0 to 255
+    let b = Math.floor(Math.random()*256);
+    // combine total r-g-b
+    let rgb = `rgb(${r}, ${g}, ${b})`;
+    return rgb;
 }
