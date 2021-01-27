@@ -9,8 +9,8 @@ let colors = [
 ];
 */
 // to get a color randomly
-let colors = generateRandomColors(6);
-
+let numOfSquare = 6; 
+let colors = generateRandomColors(numOfSquare);
 let square = document.querySelectorAll(".square");
 
 // picked initial color for displaying in the heading
@@ -106,7 +106,7 @@ let playButton = document.querySelector(".play");
 
 playButton.addEventListener("click", function(){
     // generate all new colors
-    colors = generateRandomColors(6);
+    colors = generateRandomColors(numOfSquare);
     // picked a new color
     pickedColor = pickColor();
     // change the message display color
@@ -128,7 +128,8 @@ easyButton.addEventListener("click", function(){
     hardButtotn.classList.remove("selected");
     easyButton.classList.add("selected");
 
-    colors = generateRandomColors(3);
+    numOfSquare = 3;
+    colors = generateRandomColors(numOfSquare);
     pickedColor = pickColor();
     displayColor.textContent = pickedColor.toUpperCase();
     headColor.style.backgroundColor = "#3a3535";
@@ -147,7 +148,8 @@ hardButtotn.addEventListener("click", function(){
     easyButton.classList.remove("selected");
     hardButtotn.classList.add("selected");
 
-    colors = generateRandomColors(6);
+    numOfSquare = 6;
+    colors = generateRandomColors(numOfSquare);
     pickedColor = pickColor();
     displayColor.textContent = pickedColor.toUpperCase();
     headColor.style.backgroundColor = "#3a3535";
