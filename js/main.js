@@ -111,6 +111,7 @@ playButton.addEventListener("click", function(){
     pickedColor = pickColor();
     // change the message display color
     displayColor.textContent = pickedColor.toUpperCase();
+    displayMessage.textContent = "Result";
     // changes color of square
     for(let i = 0; i < square.length; i++){
         square[i].style.backgroundColor = colors[i];
@@ -133,6 +134,8 @@ easyButton.addEventListener("click", function(){
     pickedColor = pickColor();
     displayColor.textContent = pickedColor.toUpperCase();
     headColor.style.backgroundColor = "#3a3535";
+    displayMessage.textContent = "Result";
+    playButton.textContent = "New Game";
     for(let i = 0; i < square.length; i++){
         if(colors[i]){
             square[i].style.backgroundColor = colors[i];
@@ -153,6 +156,8 @@ hardButtotn.addEventListener("click", function(){
     pickedColor = pickColor();
     displayColor.textContent = pickedColor.toUpperCase();
     headColor.style.backgroundColor = "#3a3535";
+    displayMessage.textContent = "Result";
+    playButton.textContent = "New Game";
     for(let i = 0; i < square.length; i++){
         square[i].style.backgroundColor = colors[i];
         square[i].style.display = "block";
