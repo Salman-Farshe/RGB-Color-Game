@@ -12,7 +12,7 @@ body {
   .container h1 {
     color: whitesmoke;
     text-align: center;
-    padding-bottom: 2rem; }
+    padding: 2rem 0; }
   .container .menu {
     background-color: whitesmoke;
     display: grid;
@@ -57,3 +57,21 @@ body {
       margin: 1rem;
       border-radius: 2.5rem;
       transition: background 1s; }
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .container .color {
+    max-width: 80%; } }
+
+@media (max-width: 767px) {
+  .container .color {
+    max-width: 100%; }
+    .container .color .square {
+      max-width: 20%;
+      margin: 1rem auto;
+      padding: 3rem;
+      border-radius: 1.2rem; } }
+
+@media (max-width: 600px) {
+  .container .menu .play, .container .menu .message, .container .menu .easy, .container .menu .hard {
+    margin: 0rem 0.5rem;
+    padding: 0.2rem 0.5rem; } }
