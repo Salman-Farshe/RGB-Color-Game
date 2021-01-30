@@ -1,7 +1,8 @@
 *{
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: auto;
+    scroll-behavior: auto;
 }
 body{
     background-color: #3a3535;
@@ -55,6 +56,7 @@ body{
         max-width: 50%;
         min-height: 100%;
         margin: 3rem auto;
+        margin-bottom: 0rem;
         display: grid;
         grid-template-columns: auto auto auto;
         grid-template-rows: auto auto;
@@ -70,32 +72,57 @@ body{
     }
 }
 // making responsive 
-@media (min-width: 768px) and (max-width: 1199px){
-    .container{
-        .color{
-            max-width: 80%;
-        }
-    }
-}
-@media (max-width: 767px){
-    .container{
-        .color{
-            max-width: 100%;
-            .square{
-                max-width: 20%;
-                margin: 1rem auto;
-                padding: 3rem;
-                border-radius: 1.2rem;
-            }
-        }
-    }
-}
 @media (max-width: 600px){
     .container{
+        h1{
+            padding: 0.2rem;
+            font-size: 0.8rem;
+        }
         .menu{
             .play, .message, .easy, .hard{
                 margin: 0rem 0.5rem;
                 padding: 0.2rem 0.5rem;
+                font-size: 0.8rem;
+            }
+        }
+        .color{
+            max-width: 100%;
+            margin: 1rem auto;
+            .square{
+                padding: 2rem;
+                border-radius: 1rem;
+            }
+        }
+    }
+}
+@media (min-width: 601px) and (max-width: 767px){
+    .container{
+        h1{
+            padding: 0.2rem 0rem;
+            font-size: 1.1rem;
+        }
+        .color{
+            max-width: 100%;
+            margin: 1rem auto;
+            .square{
+                padding: 3.5rem;
+                margin: 0.8rem;
+                border-radius: 1.5rem;
+            }
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 1199px){
+    .container{
+        h1{
+            padding: 0.2rem 0rem;
+            font-size: 1.2rem;
+        }
+        .color{
+            max-width: 80%;
+            margin: 1rem auto;
+            .square{
+                padding: 4rem;
             }
         }
     }
