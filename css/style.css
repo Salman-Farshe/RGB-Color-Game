@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  overflow: auto;
+  overflow: hidden;
   scroll-behavior: auto; }
 
 body {
@@ -47,7 +47,8 @@ body {
     color: #51eb14;
     font-size: 1rem;
     letter-spacing: 0.1rem;
-    text-align: center; }
+    text-align: center;
+    opacity: 0.5; }
   .container .color {
     max-width: 50%;
     min-height: 100%;
@@ -73,9 +74,11 @@ body {
     margin: 0rem 0.5rem;
     padding: 0.2rem 0.5rem;
     font-size: 0.8rem; }
+  .container p {
+    letter-spacing: 0rem; }
   .container .color {
     max-width: 100%;
-    margin: 1rem auto; }
+    margin: 0rem auto; }
     .container .color .square {
       padding: 2rem;
       border-radius: 1rem; } }
@@ -94,11 +97,11 @@ body {
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .container h1 {
-    padding: 0.2rem 0rem;
+    padding: 1rem 0rem;
     font-size: 1.2rem; }
   .container .color {
     max-width: 80%;
-    margin: 1rem auto; }
+    margin: 5rem auto; }
     .container .color .square {
       padding: 4rem; } }
 
@@ -107,8 +110,7 @@ body {
     padding: 1.5rem 0;
     font-size: 1.2rem; }
   .container p {
-    padding: 1rem 0;
-    opacity: 0.5; }
+    padding: 1rem 0; }
   .container .color {
     max-width: 100%;
     margin: 2rem auto; } }

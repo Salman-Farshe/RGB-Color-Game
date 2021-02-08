@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    overflow: auto;
+    overflow: hidden;
     scroll-behavior: auto;
 }
 body{
@@ -57,6 +57,7 @@ body{
         font-size: 1rem;
         letter-spacing: 0.1rem;
         text-align: center;
+        opacity: 0.5;
     }
     .color{
         max-width: 50%;
@@ -91,9 +92,12 @@ body{
                 font-size: 0.8rem;
             }
         }
+        p{
+            letter-spacing: 0rem;
+        }
         .color{
             max-width: 100%;
-            margin: 1rem auto;
+            margin: 0rem auto;
             .square{
                 padding: 2rem;
                 border-radius: 1rem;
@@ -121,12 +125,12 @@ body{
 @media (min-width: 768px) and (max-width: 1199px){
     .container{
         h1{
-            padding: 0.2rem 0rem;
+            padding: 1rem 0rem;
             font-size: 1.2rem;
         }
         .color{
             max-width: 80%;
-            margin: 1rem auto;
+            margin: 5rem auto;
             .square{
                 padding: 4rem;
             }
@@ -141,7 +145,6 @@ body{
         }
         p{
             padding: 1rem 0;
-            opacity: 0.5;
         }
         .color{
             max-width: 100%;
