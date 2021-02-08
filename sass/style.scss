@@ -133,3 +133,19 @@ body{
         }
     }
 }
+@media (max-width: 480px){
+    .container{
+        h1{
+            padding: 1.5rem 0;
+            font-size: 1.2rem;
+        }
+        p{
+            padding: 1rem 0;
+            opacity: 0.5;
+        }
+        .color{
+            max-width: 100%;
+            margin: 2rem auto;
+        }
+    }
+}

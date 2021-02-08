@@ -101,3 +101,14 @@ body {
     margin: 1rem auto; }
     .container .color .square {
       padding: 4rem; } }
+
+@media (max-width: 480px) {
+  .container h1 {
+    padding: 1.5rem 0;
+    font-size: 1.2rem; }
+  .container p {
+    padding: 1rem 0;
+    opacity: 0.5; }
+  .container .color {
+    max-width: 100%;
+    margin: 2rem auto; } }
