@@ -43,6 +43,11 @@ body {
       height: 100%;
       font-weight: 700;
       transition: all 1s; }
+  .container p {
+    color: #51eb14;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    text-align: center; }
   .container .color {
     max-width: 50%;
     min-height: 100%;
